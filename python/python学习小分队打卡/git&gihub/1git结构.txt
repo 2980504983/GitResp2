@@ -1,0 +1,1 @@
+工作区 -（git add）-> 暂存区 -（git commit）-> 本地库
