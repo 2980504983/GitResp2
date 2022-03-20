@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 100px;
+            margin: 0 auto;
+            border: solid 1px #666;
+            background-color: #eee;
+            text-align: center;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        0000
+    </div>
+    <script>
+        // 计算1-100之间的和
+        var i=1, s=0; //定义初始变量
+
+        // 使用while方式
+        // while(i<=100){
+        //     s+=i;
+        //     i++;
+        // }
+
+        // 使用do while方式
+        // do{
+        //     s+=i;
+        //     i++;
+        // } while (i<=100);
+        
+        // 使用for方式
+        for(;i<=100;i++){
+            // 计算某一段的数字使用break
+            if(i==51) break;
+            s+=i;
+        }
+
+        // 获取元素
+        var objResult=document.getElementById("result")
+        // 将结果显示在元素中
+        objResult.innerText = s;
+    </script>
+</body>
+</html>

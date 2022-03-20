@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mob{
+            width: 352px;
+            height: 626px;
+            margin: 0 auto;
+            border: solid 1px red;
+            background-image: url("kitazzingerCG_14.jpg");
+        }
+        #mob>img{
+            width: 80%;
+            height: 70%;
+            margin-top: 72px;
+            margin-left: 29px;
+        }
+        #mob>iframe{
+            margin-top: 74px;
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="mob">
+            <img src="./kitazzingerCG_14.jpg" alt="">
+            <!-- 在页面中打开另一个页面 -->
+            <!-- 如果在一个页面中嵌入一个网址的页面,可以使用frame元素,frame缺点,启动时,消耗比较大,但是也是一种方式 -->
+            <iframe src="https://www.baidu.com" frameborder="1"
+                    width="322px" height="482px">
+
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #search{
+            width: 260px;
+            margin: 0 auto;
+        }
+        p>span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="search">
+        <input type="text" id="key">
+        <button id="find">查询</button>
+        <p id="p1">
+            今天是一个好天气,后天又是大晴天
+            今天是一个好天气,后天又是大晴天
+        </p>
+    </div>
+    <script>
+        function $$(id){
+            return document.getElementById(id);
+        }
+        // 获取查询按钮并绑定单击事件
+        var find=$$('find');
+        // 获取文本框对象
+        var key = $$('key');
+        // 获取内容对象
+        var p1 = $$('p1');
+
+        find.onclick=function(){
+            // 定义正则对象
+            var reg=new RegExp(key.value, "ig");
+            // 获取内容
+            var NewStr = p1.innerHTML.replace(reg, "<span>"+key.value+"</span>");
+            // 重置新的字符串
+            p1.innerHTML = NewStr;
+
+        }
+    </script>
+</body>
+</html>

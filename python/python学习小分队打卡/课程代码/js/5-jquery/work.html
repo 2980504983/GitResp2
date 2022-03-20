@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        ul{
+            width: 550px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 5px solid #4c4c4c;
+        }
+        ul>li{
+            border-bottom: solid 1px #cee2df;
+            overflow: hidden;
+        }
+        ul>li>span{
+            width: 101px;
+            padding: 5px 4px;
+            float: left;
+            border-right: solid 1px #cee2df;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <span>Product</span>
+            <span>Price</span>
+            <span>ID Code</span>
+            <span>Quality</span>
+            <span>Exp Date</span>
+ 
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+        <li>
+            <span>Pro 1</span>
+            <span>51 $</span>
+            <span>4587</span>
+            <span>Good</span>
+            <span>02/01/2009</span>
+        </li>
+    </ul>
+    <script>
+        // 获取除第一行以外的行集合
+        $("ul>li:not(li:first)").each(function(index, elem){
+            //将每一项元素转成jq对象
+            $(elem).on("mouseover", function(){
+                $(this).css({"background-color": "#aaa", "color": "#fff"})
+            }).on("mouseout", function(){
+                $(this).css({"background-color": "#fff", "color": "#000"})
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
