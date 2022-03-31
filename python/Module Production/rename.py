@@ -1,4 +1,0 @@
-def name(x):
-
-
-    pass

@@ -1,6 +1,0 @@
-a   一个
-apple  苹果
-because  因为
-pen  钢笔
-box 箱子
-rule  尺子
