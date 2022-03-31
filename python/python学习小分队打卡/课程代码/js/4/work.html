@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fs{
+            width: 260px;
+            border: solid 1px #ccc;
+            padding: 10px;
+        }
+        .focus{
+            color:black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 分析页面结构 -->
+    <!-- 2 添加需求元素 -->
+    <!-- 3 添加元素样式 -->
+    <!-- 4 微调,调优 -->
+    <div id="fs">
+        <div class="title">
+            <!-- 为了使a元素不跳转,须在href属性中添加javascript:; -->
+            <a href="javascript:;">大</a>
+            <a href="javascript:;">中</a>
+            <a href="javascript:;" class="focus">小</a>
+        </div>
+        <p id="p1">
+            唧唧复唧唧木兰当户织不闻机杼声惟闻女叹息唧唧复唧唧木兰当户织不闻机杼声惟闻女叹息
+        </p>
+    </div>
+    <script>
+        var links = document.getElementsByTagName('a');
+        var p1 = document.getElementById('p1')
+
+        links[0].onclick=function(){
+            p1.style.fontSize='30px';
+            // 移除全部样式
+            clearFocus();
+            // 设置选中效果样式
+            this.className='focus';  //this 在函数中表示绑定元素本身
+        };
+
+        links[1].onclick=function(){
+            p1.style.fontSize='25px';
+            clearFocus();
+            links[1].className='focus';
+            
+        };
+
+        links[2].onclick=function(){
+            p1.style.fontSize='20px';
+            clearFocus();
+            links[2].className='focus';
+            
+        };
+
+        // 使用函数移除全部链接样式
+        function clearFocus(){
+            for(var i=0;i<links.length;i++){
+                links[i].removeAttribute('class');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div>aaa</div>
+    <div>bbb</div>
+    <div>ccc</div>
+    <script>
+        //使用each函数完成遍历选择器选择到的元素数组
+        //写法: 选择器.each(function(index， element))
+        $("div").each(function(index, elem){
+            console.log(index);
+            // 获取元素内容,注意要先将elem转成jq对象
+            console.log($(elem).text());
+
+        })
+    </script>
+</body>
+</html>

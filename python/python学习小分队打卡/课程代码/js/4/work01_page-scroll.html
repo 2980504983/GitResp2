@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pics{
+            width: 739px;
+            height: 419px;
+            border: solid 1px red;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #img{
+            width: 100%;
+        }
+        #pics>.lleft{
+            top: 45%;
+            left: 0;
+            position: absolute;
+            cursor:pointer;
+        }
+        #pics>.rright{
+            top: 45%;
+            right: 0;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="pics">
+        <a href="https://baidu.com"><img id="img" src="../2/haaminCG_01.jpg" alt="图片显示失败"></a>
+        <div class="lleft">
+            <img width="45px" src="../2/haaminCG_01.jpg" alt="">
+        </div>
+        <div class="rright">
+            <img width="45px" src="../2/haaminCG_01.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        // 新建一个数组,保存全部图片的地址
+        var arrayImgs = ['Phoenix1237CG_09 (1).jpg',"../2/haaminCG_01.jpg"];
+        // 获取右侧按钮对象
+        var rright = document.getElementsByClassName('rright')[0];
+        // 获取左侧按钮对象
+        var lleft = document.getElementsByClassName('lleft')[0];
+
+        // 获取显示图片元素对象
+        var img = document.getElementById('img')
+
+        // 定义一个下标变量
+        var index = 0;
+
+        // 绑定左侧按钮事件
+        lleft.onclick=function(){
+            // 判断是否超过图片数量
+            if(index==0) index=arrayImgs.length;
+            index--;
+            console.log(index);
+            img.setAttribute('src', arrayImgs[index]);
+        }
+
+        // 绑定按钮事件
+        rright.onclick=function(){
+            // 下标累加一
+            index++;
+            // 判断是否超过图片数量
+            if(index==arrayImgs.length) index=0;
+            console.log(index);
+            // 调用修改属性方法重置图片来源
+            img.setAttribute('src', arrayImgs[index]);
+        }
+    </script>
+</body>
+</html>

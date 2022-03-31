@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            width: 300px;
+            border: solid 1px red;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        #parent>#child{
+            width: 300px;
+            height: 35px;
+            background-color: rgba(0,0,255,0.5);
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            text-align: center;
+        }
+        #parent>img{
+            /* 子元素可以设置为百分比的宽度,这个百分比相对于它的父元素 */
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <img src="../3/img/kitazzingerCG_14.jpg" alt="图片加载失败">
+        <div id="child">
+            云倾然,一生推
+        </div>
+    </div>
+</body>
+</html>

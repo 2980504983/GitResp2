@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sw">
+        <!-- 设置可拖动的元素 -->
+        <input type="range"
+               id="num"
+               min="1" 
+               max="10" 
+               step="2"
+               value="3">
+        <div id="tip">
+            
+        </div>
+    </div>
+    <script>
+        // 1 获取拖动元素对象
+        var a=document.getElementById("num");
+        // 2 直接绑定对象的值改变事件
+        a.onchange=function a(){
+            var b=document.getElementById("tip");
+            console.log(a.value);
+            b.innerText=a.value;
+            switch(a.value){
+                case '1':
+                    console.log('今天天气很好');
+                    break;
+                case '2':
+                    console.log('明天天气很好');
+                    break;
+                default:
+                    console.log('没有选项');
+            }
+        }
+    </script>
+</body>
+</html>
